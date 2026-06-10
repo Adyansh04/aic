@@ -1,9 +1,23 @@
 {
     "typeCheckingMode": "basic",
+    "venvPath": ".pixi/envs",
+    "venv": "default",
     "include": [
+        "aic_model",
+        "aic_example_policies",
         "aic_utils/lerobot_robot_aic",
     ],
     "exclude": [
         "**/build"
+    ],
+    "executionEnvironments": [
+        {
+            "root": ".",
+            "extraPaths": [
+                ".pixi/envs/default/lib/python3.12/site-packages",
+                "aic_model",
+                "aic_example_policies"
+            ]
+        }
     ]
 }

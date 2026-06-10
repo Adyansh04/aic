@@ -39,7 +39,7 @@ class CheatCode(Policy):
         self._tip_x_error_integrator = 0.0
         self._tip_y_error_integrator = 0.0
         self._max_integrator_windup = 0.05
-        self._task = None
+        self._task: Task = None
         super().__init__(parent_node)
 
     def _wait_for_tf(
