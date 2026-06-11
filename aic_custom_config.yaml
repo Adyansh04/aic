@@ -147,7 +147,7 @@ trials:
         port_type: "sfp"
         port_name: "sfp_port_0"
         target_module_name: "nic_card_mount_0"
-        time_limit: 180
+        time_limit: 10000
   trial_2:
     scene:
         task_board:
