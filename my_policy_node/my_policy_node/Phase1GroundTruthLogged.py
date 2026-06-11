@@ -87,6 +87,14 @@ class Phase1GroundTruthLogged(Policy):
     ENTRANCE_PLANE_EPS_M = 0.0
     INSERTION_DEPTH_EVENT_M = 0.005
 
+    # Truthful success gate for manual custom scenes.
+    # The original logged script always returned True after the timed descent.
+    # In custom scenes this can be misleading: the robot may stop in mid-air
+    # while the commanded z_offset reaches END_Z_OFFSET.
+    SUCCESS_MIN_ENTRANCE_AXIS_M = 0.005
+    SUCCESS_MAX_ENTRANCE_LAT_M = 0.0035
+    SUCCESS_MAX_INNER_XY_M = 0.0040
+
     def __init__(self, parent_node):
         self._task: Optional[Task] = None
         self._xy_integrator = np.zeros(2, dtype=float)
@@ -627,6 +635,25 @@ class Phase1GroundTruthLogged(Policy):
                 period=self.SAMPLE_LOG_PERIOD,
             )
 
+    def _is_physically_inserted(self, m: dict[str, float]) -> bool:
+        """Return True only when logged TF metrics indicate real insertion.
+
+        entrance_axis > 0 means the plug frame crossed the entrance plane.
+        We require >= 5 mm past entrance plus small lateral error.
+        """
+        ent_axis = float(m.get("ent_axis", float("nan")))
+        ent_lat = float(m.get("ent_lat", float("nan")))
+        inner_xy = float(m.get("inner_xy", float("nan")))
+
+        if math.isnan(ent_axis) or math.isnan(ent_lat) or math.isnan(inner_xy):
+            return False
+
+        return (
+            ent_axis >= self.SUCCESS_MIN_ENTRANCE_AXIS_M
+            and ent_lat <= self.SUCCESS_MAX_ENTRANCE_LAT_M
+            and inner_xy <= self.SUCCESS_MAX_INNER_XY_M
+        )
+
     # -------------------------------------------------------------------------
     # Main AIC callback.
     # -------------------------------------------------------------------------
@@ -791,7 +818,52 @@ class Phase1GroundTruthLogged(Policy):
             force_now=True,
         )
 
-        self.log_event("DONE", "Phase1GroundTruthLogged.insert_cable() complete", C.GREEN)
-        send_feedback("Phase 1 ground-truth logged baseline complete")
+        # Do a real physical-success check from the same entrance metrics.
+        # This prevents "SUCCEEDED" when the timed open-loop descent ends while
+        # the plug is still in air.
+        final_observation = get_observation()
+        try:
+            final_metrics = self._compute_metrics(
+                port_tf=port_tf,
+                entrance_tf=entrance_tf,
+                observation=final_observation,
+            )
+        except TransformException as ex:
+            self.log_event("ERROR", f"Final TF check failed: {ex}", C.RED)
+            send_feedback("Phase 1 ground-truth logged baseline failed: final TF check failed")
+            self.sleep_for(2.0)
+            return False
+
+        inserted = self._is_physically_inserted(final_metrics)
+
+        if inserted:
+            self.log_event(
+                "DONE",
+                (
+                    "physical insertion confirmed: "
+                    f"ent_axis={final_metrics['ent_axis']:+.4f}, "
+                    f"ent_lat={final_metrics['ent_lat']:.4f}, "
+                    f"inner_xy={final_metrics['inner_xy']:.4f}"
+                ),
+                C.GREEN,
+            )
+            send_feedback("Phase 1 ground-truth logged baseline complete")
+            self.sleep_for(2.0)
+            return True
+
+        self.log_event(
+            "FAILED",
+            (
+                "timed descent finished but plug is not inserted: "
+                f"ent_axis={final_metrics['ent_axis']:+.4f}, "
+                f"ent_lat={final_metrics['ent_lat']:.4f}, "
+                f"inner_xy={final_metrics['inner_xy']:.4f}, "
+                f"inner_z={final_metrics['inner_z']:+.4f}. "
+                "This usually means wrong plug/target frame, unreachable custom scene, "
+                "or Cartesian controller tracking error."
+            ),
+            C.RED,
+        )
+        send_feedback("Phase 1 ground-truth logged baseline failed: plug not physically inserted")
         self.sleep_for(2.0)
-        return True
+        return False

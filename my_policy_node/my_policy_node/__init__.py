@@ -5,5 +5,5 @@ from .Phase1ForceAwareGroundTruth import Phase1ForceAwareGroundTruth
 __all__ = [
     "Phase1GroundTruth",
     "Phase1GroundTruthLogged",
-    "Phase1ForceAwareGroundTruth",
+    "Phase1ForceAwareGroundTruth"
 ]
