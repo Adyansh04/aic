@@ -12,37 +12,37 @@ objects:
     fallback_reference_frame_template: task_board/{target_module_name}/{port_name}_link
     keypoints:
       corner_tr:
-      - -0.012
-      - 0.005
+      - -0.0129
+      - 0.004600000000000001
       - 0.0
       corner_br:
-      - -0.012
-      - -0.005
+      - -0.0129
+      - -0.00465
       - 0.0
       corner_tl:
-      - 0.012
-      - 0.005
+      - 0.0129
+      - 0.00465
       - 0.0
       corner_bl:
-      - 0.012
-      - -0.005
+      - 0.0129
+      - -0.00465
       - 0.0
       inner_right_square_tl:
-      - -0.012
-      - 0.005 
-      - 0.0117  
+      - -0.00175
+      - 0.0038
+      - 0.0
       inner_right_square_bl:
-      - 0.012
-      - -0.005
-      - 0.0117
+      - -0.00175
+      - -0.0038
+      - 0.0
       inner_left_square_tr:
-      - -0.012
-      - 0.005
-      - -0.0117
+      - 0.00175
+      - 0.0038
+      - 0.0
       inner_left_square_br:
-      - 0.012
-      - -0.005  
-      - -0.0117
+      - 0.00175
+      - -0.0038
+      - 0.0
       center:
       - 0.0
       - 0.0
