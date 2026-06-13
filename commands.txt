@@ -1,0 +1,100 @@
+To run the demo and policies
+
+cd ws_aic/src/aic/
+
+export DBX_CONTAINER_MANAGER=docker
+
+distrobox enter -r aic_eval
+
+/entrypoint.sh \                                               
+  ground_truth:=true \                 
+  start_aic_engine:=true \
+  gazebo_gui:=false \    
+  aic_engine_config_file:=/home/adyansh/ws_aic/src/aic/aic_custom_config.yaml
+
+
+PYTHONPATH=$PWD/my_policy_node:$PYTHONPATH \
+pixi run ros2 run aic_model aic_model \
+  --ros-args \            
+  -p use_sim_time:=true \
+  -p policy:=my_policy_node.KeypointYamlTuner
+
+
+
+
+
+
+
+
+
+
+COMMANDS FOR DATA SET GENERATION 
+
+PYTHONPATH=$PWD/my_policy_node:$PYTHONPATH \
+pixi run python my_policy_node/my_policy_node/perception/dataset_tools/generate_dataset_engine_config.py \
+  --base ~/ws_aic/src/aic/aic_custom_config.yaml \
+  --out /home/adyansh/ws_aic/src/aic/aic_dataset_debug10.yaml \
+  --mode debug10
+
+Terminal 1:
+
+/entrypoint.sh \
+  ground_truth:=true \
+  start_aic_engine:=true \
+  gazebo_gui:=true \
+  aic_engine_config_file:=/home/adyansh/ws_aic/src/aic/aic_dataset_debug10.yaml
+
+
+Terminal 2:
+PYTHONPATH=$PWD/my_policy_node:$PYTHONPATH \
+pixi run ros2 run aic_model aic_model \
+  --ros-args \
+  -p use_sim_time:=true \
+  -p policy:=my_policy_node.DatasetCollector
+
+
+
+What each code file does
+
+DatasetCollector.py
+
+Receives AIC task
+chooses sc or sfp config
+moves robot through viewpoints
+projects 3D YAML keypoints into left/center/right images
+excludes center keypoints from YOLO labels
+saves raw images
+saves YOLO-pose labels
+saves overlays
+saves metadata JSON
+returns True so engine advances to next trial
+
+It uses OpenCV projection now, and later we will use the inverse path, OpenCV solvePnP, to estimate pose from predicted 2D keypoints plus the same 3D keypoint YAML. OpenCV defines PnP as recovering object pose from 3D object points, 2D image points, camera matrix, and distortion coefficients.
+
+generate_dataset_engine_config.py
+
+Copies scoring / limits / robot home from sample engine config
+creates 5 SFP + 5 SC debug trials or 40 medium trials
+varies board pose, board yaw, NIC rail, SC rail, rail translation, target port
+writes an engine YAML usable with start_aic_engine:=true
+
+aic_keypoint_config_dataset_ready.yaml
+
+Your tuned physical keypoint measurements
+plus training.exclude_keypoints
+plus comments/descriptions
+
+Dataset-generation checklist
+
+Run in this order:
+
+1. Copy DatasetCollector.py
+2. Copy generate_dataset_engine_config.py
+3. Copy dataset-ready keypoint YAML
+4. Generate debug10 engine config
+5. Launch /entrypoint.sh with ground_truth=true start_aic_engine=true
+6. Run DatasetCollector
+7. Inspect overlays
+8. Fix YAML if overlays are off
+9. Regenerate debug10
+10. Generate medium40 only after debug10 looks correct

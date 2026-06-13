@@ -1,0 +1,567 @@
+version: 1
+object_name: sfp
+units: meters
+motion_camera_name: center
+description: Manual calibrated camera offsets relative to the active entrance/reference
+  frame. Each cam_offset_ref is [x,y,z] in that reference frame.
+viewpoints:
+- name: sfp_manual_000
+  cam_offset_ref:
+  - 0.038947065058203445
+  - -0.09448526177583427
+  - -0.41086650689643484
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299246.5573168
+- name: sfp_manual_001
+  cam_offset_ref:
+  - -0.010454931390504796
+  - -0.06439247929634262
+  - -0.4111135566411014
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299266.9453294
+- name: sfp_manual_002
+  cam_offset_ref:
+  - -0.03319737802655626
+  - -0.07056760906040932
+  - -0.41042588188976403
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299275.8256068
+- name: sfp_manual_003
+  cam_offset_ref:
+  - -0.06516149465910298
+  - -0.0224822595803692
+  - -0.4103847450686629
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299300.8500571
+- name: sfp_manual_004
+  cam_offset_ref:
+  - -0.06298295937693404
+  - -0.022556848534363266
+  - -0.4616182219090261
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299313.8856127
+- name: sfp_manual_005
+  cam_offset_ref:
+  - -0.15043854789134153
+  - -0.03432360352463071
+  - -0.4564835930873052
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299332.528331
+- name: sfp_manual_006
+  cam_offset_ref:
+  - -0.14905852739479958
+  - -0.0353096029207087
+  - -0.42726730283064174
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299341.7720718
+- name: sfp_manual_007
+  cam_offset_ref:
+  - -0.15007922823629188
+  - -0.01238120175236826
+  - -0.42839035334630815
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299348.5360408
+- name: sfp_manual_008
+  cam_offset_ref:
+  - -0.08848089774181395
+  - -0.013334814764535796
+  - -0.43088523777742305
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299358.9954393
+- name: sfp_manual_009
+  cam_offset_ref:
+  - -0.02934451852787734
+  - -0.01364974072118974
+  - -0.4321405543581012
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299369.3879902
+- name: sfp_manual_010
+  cam_offset_ref:
+  - -0.03290601443721736
+  - -0.01369215031995813
+  - -0.3933149628905568
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299380.2414677
+- name: sfp_manual_011
+  cam_offset_ref:
+  - -0.03638281591540671
+  - -0.012690062401598423
+  - -0.3155823484312268
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299391.192105
+- name: sfp_manual_012
+  cam_offset_ref:
+  - -0.03676036708624658
+  - -0.026672333917687002
+  - -0.3150073019726928
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299396.07712
+- name: sfp_manual_013
+  cam_offset_ref:
+  - -0.03720296575254406
+  - -0.015946827457801765
+  - -0.31508529218905773
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299398.827696
+- name: sfp_manual_014
+  cam_offset_ref:
+  - -0.05980770670760893
+  - -0.016346914209469793
+  - -0.315202278669939
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299402.81207
+- name: sfp_manual_015
+  cam_offset_ref:
+  - -0.06874767154832784
+  - -0.01658800484515513
+  - -0.3155739693820892
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299405.7723098
+- name: sfp_manual_016
+  cam_offset_ref:
+  - -0.08772438308860053
+  - -0.01650244332207193
+  - -0.3157744782633479
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299409.982228
+- name: sfp_manual_017
+  cam_offset_ref:
+  - -0.10835037788553004
+  - -0.016387167176662776
+  - -0.3155049515643743
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299415.0405853
+- name: sfp_manual_018
+  cam_offset_ref:
+  - -0.11881647741975199
+  - -0.016480034001501387
+  - -0.3155240021601651
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299419.4918463
+- name: sfp_manual_019
+  cam_offset_ref:
+  - -0.11709197038436997
+  - -0.016518388906114567
+  - -0.331528823786469
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299423.9811153
+- name: sfp_manual_020
+  cam_offset_ref:
+  - -0.11901534116060886
+  - -0.016183762096672494
+  - -0.28495415958014003
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299433.8119612
+- name: sfp_manual_021
+  cam_offset_ref:
+  - -0.09336953584147839
+  - -0.016321180861573192
+  - -0.2840253514623261
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299440.3833961
+- name: sfp_manual_022
+  cam_offset_ref:
+  - -0.06006029292546633
+  - -0.016009078103600416
+  - -0.27569999599019757
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299450.3869097
+- name: sfp_manual_023
+  cam_offset_ref:
+  - -0.021125767538567708
+  - -0.035135014536455345
+  - -0.2751211331300847
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299468.1179428
+- name: sfp_manual_024
+  cam_offset_ref:
+  - -0.0218690388753226
+  - -0.04307402134169877
+  - -0.25433886482874757
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299482.2989764
+- name: sfp_manual_025
+  cam_offset_ref:
+  - -0.04220347118001311
+  - -0.04282478415442703
+  - -0.2549931914567256
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299487.581266
+- name: sfp_manual_026
+  cam_offset_ref:
+  - -0.07622291482769805
+  - -0.042765251894176654
+  - -0.2553946289658433
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299494.5938988
+- name: sfp_manual_027
+  cam_offset_ref:
+  - -0.08568273974981722
+  - -0.02492843760625918
+  - -0.25535868154724395
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299510.5532756
+- name: sfp_manual_028
+  cam_offset_ref:
+  - -0.08756721843100695
+  - -0.02422354438066801
+  - -0.24391430383383522
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299517.6527953
+- name: sfp_manual_029
+  cam_offset_ref:
+  - -0.09417095209453402
+  - -0.024679741289810014
+  - -0.24362105335322207
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299520.672549
+- name: sfp_manual_030
+  cam_offset_ref:
+  - -0.06902498671018154
+  - -0.03295847918314529
+  - -0.2432757880166322
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299529.7389004
+- name: sfp_manual_031
+  cam_offset_ref:
+  - -0.046940594599372054
+  - -0.03312090494120218
+  - -0.24222896578978154
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299535.0159903
+- name: sfp_manual_032
+  cam_offset_ref:
+  - -0.009679571344603455
+  - -0.03303946248305731
+  - -0.2407984205250405
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299542.0922453
+- name: sfp_manual_033
+  cam_offset_ref:
+  - -0.04112044985357294
+  - -0.033372028573349505
+  - -0.1899119166073498
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299626.352486
+- name: sfp_manual_034
+  cam_offset_ref:
+  - -0.07700549170092041
+  - -0.032527038914332035
+  - -0.2571363372534211
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299654.9097571
+- name: sfp_manual_035
+  cam_offset_ref:
+  - -0.07713423780072542
+  - -0.023485649939291614
+  - -0.25659036016966486
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299660.425798
+- name: sfp_manual_036
+  cam_offset_ref:
+  - -0.08659090246389539
+  - -0.024124700824976808
+  - -0.25686510143008345
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299663.721505
+- name: sfp_manual_037
+  cam_offset_ref:
+  - -0.07010457295635009
+  - -0.01520206514105274
+  - -0.23721145876787791
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299675.1399405
+- name: sfp_manual_038
+  cam_offset_ref:
+  - -0.07056309110574921
+  - -0.01522164725447711
+  - -0.22988048440184342
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299678.0792353
+- name: sfp_manual_039
+  cam_offset_ref:
+  - -0.07085944641070147
+  - -0.014874434746919546
+  - -0.22368587242037055
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/nic_card_mount_0/sfp_port_0_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sfp
+    port_name: sfp_port_0
+    target_module_name: nic_card_mount_0
+  timestamp_unix: 1781299682.7991738

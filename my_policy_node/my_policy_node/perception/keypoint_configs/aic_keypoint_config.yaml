@@ -3,111 +3,66 @@ units: meters
 ui:
   display_scale: 0.42
   draw_all_objects: true
+training:
+  separate_models: true
+  exclude_keypoints:
+    sc:
+      - center
+    sfp:
+      - port0_center
+      - port1_center
+  derived_keypoints:
+    sc:
+      center:
+        type: mean
+        from: [corner_tl, corner_tr, corner_bl, corner_br]
+    sfp:
+      port0_center:
+        type: mean
+        from: [port0_tl, port0_tr, port0_bl, port0_br]
+      port1_center:
+        type: mean
+        from: [port1_tl, port1_tr, port1_bl, port1_br]
 objects:
   sc:
     class_id: 0
-    description: SC module keypoints. This is one SC port/module with two visible
-      holes; the holes are not separate ports.
+    description: >-
+      SC module keypoints. This is one SC port/module with two visible holes;
+      the holes are not separate ports. The center keypoint is debug-only and
+      excluded from YOLO training labels.
     reference_frame_template: task_board/{target_module_name}/{port_name}_link_entrance
     fallback_reference_frame_template: task_board/{target_module_name}/{port_name}_link
     keypoints:
-      corner_tr:
-      - -0.0129
-      - 0.004600000000000001
-      - 0.0
-      corner_br:
-      - -0.0129
-      - -0.00465
-      - 0.0
-      corner_tl:
-      - 0.0129
-      - 0.00465
-      - 0.0
-      corner_bl:
-      - 0.0129
-      - -0.00465
-      - 0.0
-      inner_right_square_tl:
-      - -0.00175
-      - 0.0038
-      - 0.0
-      inner_right_square_bl:
-      - -0.00175
-      - -0.0038
-      - 0.0
-      inner_left_square_tr:
-      - 0.00175
-      - 0.0038
-      - 0.0
-      inner_left_square_br:
-      - 0.00175
-      - -0.0038
-      - 0.0
-      center:
-      - 0.0
-      - 0.0
-      - 0.0
+      corner_tr: [-0.0129, 0.00465, 0.0]
+      corner_br: [-0.0129, -0.00465, 0.0]
+      corner_tl: [0.0129, 0.00465, 0.0]
+      corner_bl: [0.0129, -0.00465, 0.0]
+      inner_right_square_tl: [-0.00175, 0.0038, 0.0]
+      inner_right_square_bl: [-0.00175, -0.0038, 0.0]
+      inner_left_square_tr: [0.00175, 0.0038, 0.0]
+      inner_left_square_br: [0.00175, -0.0038, 0.0]
+      center: [0.0, 0.0, 0.0]
   sfp:
     class_id: 0
-    description: SFP/NIC-front keypoints. Reference is one SFP port frame on the target
-      NIC card; port0 and port1 are both labeled in that same frame.
+    description: >-
+      SFP/NIC-front keypoints. Reference is one SFP port frame on the target
+      NIC card; port0 and port1 are both labeled in that same frame. Center
+      keypoints are debug-only and excluded from YOLO training labels.
     sfp_reference_port: sfp_port_0
     reference_frame_template: task_board/{target_module_name}/{sfp_reference_port}_link_entrance
     fallback_reference_frame_template: task_board/{target_module_name}/{sfp_reference_port}_link
     keypoints:
-      nic_outer_tl:
-      - -0.077
-      - -0.0083
-      - -0.0117
-      nic_outer_tr:
-      - 0.03
-      - -0.0122
-      - -0.002
-      nic_outer_br:
-      - 0.03
-      - 0.013
-      - -0.002
-      nic_outer_bl:
-      - -0.07680000000000001
-      - 0.0151
-      - -0.0117
-      port1_tl:
-      - -0.03065
-      - -0.00495
-      - 0.0
-      port1_tr:
-      - -0.01575
-      - -0.00495
-      - 0.0
-      port1_br:
-      - -0.01575
-      - 0.00495
-      - 0.0
-      port1_bl:
-      - -0.03065
-      - 0.00495
-      - 0.0
-      port1_center:
-      - -0.0232
-      - 0.0
-      - 0.0
-      port0_tl:
-      - -0.00745
-      - -0.00495
-      - 0.0
-      port0_tr:
-      - 0.00745
-      - -0.00495
-      - 0.0
-      port0_br:
-      - 0.00745
-      - 0.00495
-      - 0.0
-      port0_bl:
-      - -0.00745
-      - 0.00495
-      - 0.0
-      port0_center:
-      - 0.0
-      - 0.0
-      - 0.0
+      nic_outer_tl: [-0.077, -0.0083, -0.0117]
+      nic_outer_tr: [0.03, -0.0122, -0.002]
+      nic_outer_br: [0.03, 0.013, -0.002]
+      nic_outer_bl: [-0.0768, 0.0151, -0.0117]
+      port1_tl: [-0.03065, -0.00495, 0.0]
+      port1_tr: [-0.01575, -0.00495, 0.0]
+      port1_br: [-0.01575, 0.00495, 0.0]
+      port1_bl: [-0.03065, 0.00495, 0.0]
+      port1_center: [-0.0232, 0.0, 0.0]
+      port0_tl: [-0.00745, -0.00495, 0.0]
+      port0_tr: [0.00745, -0.00495, 0.0]
+      port0_br: [0.00745, 0.00495, 0.0]
+      port0_bl: [-0.00745, 0.00495, 0.0]
+      port0_center: [0.0, 0.0, 0.0]

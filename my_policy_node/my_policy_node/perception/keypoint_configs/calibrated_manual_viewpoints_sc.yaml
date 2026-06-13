@@ -1,0 +1,567 @@
+version: 1
+object_name: sc
+units: meters
+motion_camera_name: center
+description: Manual calibrated camera offsets relative to the active entrance/reference
+  frame. Each cam_offset_ref is [x,y,z] in that reference frame.
+viewpoints:
+- name: sc_manual_000
+  cam_offset_ref:
+  - -0.07294017382265441
+  - -0.08410716087588294
+  - -0.4880399361352962
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299863.6757894
+- name: sc_manual_001
+  cam_offset_ref:
+  - -0.036652041264145535
+  - -0.0843251320457109
+  - -0.489535414258588
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299871.8519876
+- name: sc_manual_002
+  cam_offset_ref:
+  - -0.03474946593397345
+  - -0.11370220661690572
+  - -0.4875715387000949
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299876.8982418
+- name: sc_manual_003
+  cam_offset_ref:
+  - -0.036955287430752395
+  - -0.11152160513385306
+  - -0.4874748294934205
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299883.7686858
+- name: sc_manual_004
+  cam_offset_ref:
+  - -0.07104162236804072
+  - -0.11150197699316333
+  - -0.4869124415557467
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299889.2944295
+- name: sc_manual_005
+  cam_offset_ref:
+  - -0.10499020583760071
+  - -0.11180307828616243
+  - -0.486803604516546
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299893.7616475
+- name: sc_manual_006
+  cam_offset_ref:
+  - -0.14605641139696512
+  - -0.1125514816374606
+  - -0.4868180710404158
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299899.3715212
+- name: sc_manual_007
+  cam_offset_ref:
+  - -0.14939911120840504
+  - -0.11137848801096778
+  - -0.4443887689906553
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299909.1751087
+- name: sc_manual_008
+  cam_offset_ref:
+  - -0.1442093701329521
+  - -0.11916476856275965
+  - -0.44531491258843386
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299917.6761405
+- name: sc_manual_009
+  cam_offset_ref:
+  - -0.14025631472794603
+  - -0.08604710209594801
+  - -0.4529441880759087
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299929.4797058
+- name: sc_manual_010
+  cam_offset_ref:
+  - -0.1195598346038102
+  - -0.08817184324081484
+  - -0.4543270636321895
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299936.3680055
+- name: sc_manual_011
+  cam_offset_ref:
+  - -0.09874699832009712
+  - -0.088019889575429
+  - -0.45534319541389306
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299939.7060661
+- name: sc_manual_012
+  cam_offset_ref:
+  - -0.0716324871487148
+  - -0.08779833133813292
+  - -0.4551687677226547
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299944.0979466
+- name: sc_manual_013
+  cam_offset_ref:
+  - -0.031898572695484795
+  - -0.08750181206400642
+  - -0.4547994455542034
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299949.6516278
+- name: sc_manual_014
+  cam_offset_ref:
+  - -0.028322112838202074
+  - -0.083407471603199
+  - -0.38823542661347993
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299962.6691883
+- name: sc_manual_015
+  cam_offset_ref:
+  - -0.037846118181040056
+  - -0.08341372466664287
+  - -0.3851999253474017
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299965.5494008
+- name: sc_manual_016
+  cam_offset_ref:
+  - -0.060130948778961885
+  - -0.08382666832205199
+  - -0.3839948751641534
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299969.1994607
+- name: sc_manual_017
+  cam_offset_ref:
+  - -0.08226627226269319
+  - -0.08406291051990417
+  - -0.3833704289969422
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299972.6257422
+- name: sc_manual_018
+  cam_offset_ref:
+  - -0.1028721002661201
+  - -0.0843223091514651
+  - -0.38286049702491953
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299975.813937
+- name: sc_manual_019
+  cam_offset_ref:
+  - -0.1064352208747965
+  - -0.10700606744234564
+  - -0.3848195115540932
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299981.5793934
+- name: sc_manual_020
+  cam_offset_ref:
+  - -0.10566136365702629
+  - -0.0764761245597182
+  - -0.38293701572295513
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299986.4116027
+- name: sc_manual_021
+  cam_offset_ref:
+  - -0.10495843913761874
+  - -0.0546114350075127
+  - -0.38292117851679613
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299989.6964042
+- name: sc_manual_022
+  cam_offset_ref:
+  - -0.10422310308006327
+  - -0.01188559571381792
+  - -0.38332796006575376
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781299995.990161
+- name: sc_manual_023
+  cam_offset_ref:
+  - -0.10355453080795754
+  - 0.015434266906283967
+  - -0.38362895083538895
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300000.761885
+- name: sc_manual_024
+  cam_offset_ref:
+  - -0.1035215228183724
+  - 0.03232617561968182
+  - -0.38424525507630736
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300003.6054378
+- name: sc_manual_025
+  cam_offset_ref:
+  - -0.1036312673342219
+  - 0.03867975675013774
+  - -0.2954699538374635
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300017.2815783
+- name: sc_manual_026
+  cam_offset_ref:
+  - -0.10349299376346113
+  - 0.029404303155565914
+  - -0.295117710828736
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300020.5377386
+- name: sc_manual_027
+  cam_offset_ref:
+  - -0.10373206219078202
+  - -0.020204260313038402
+  - -0.2947764140128964
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300028.535562
+- name: sc_manual_028
+  cam_offset_ref:
+  - -0.10380232711204163
+  - -0.035002669449926305
+  - -0.29399761049616663
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300031.9823537
+- name: sc_manual_029
+  cam_offset_ref:
+  - -0.0979852204912175
+  - -0.01612657820546215
+  - -0.29353782471894135
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300044.7142594
+- name: sc_manual_030
+  cam_offset_ref:
+  - -0.08227573076827224
+  - -0.016005568627627587
+  - -0.29380235242815433
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300047.2445986
+- name: sc_manual_031
+  cam_offset_ref:
+  - -0.08768809811846481
+  - -0.025576886544263044
+  - -0.29337247213749174
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300050.4930677
+- name: sc_manual_032
+  cam_offset_ref:
+  - -0.08776312985579932
+  - -0.03442983509017988
+  - -0.29364980073570746
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300053.180276
+- name: sc_manual_033
+  cam_offset_ref:
+  - -0.08755098290889238
+  - -0.03502075883453132
+  - -0.21217329943904062
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300066.5577068
+- name: sc_manual_034
+  cam_offset_ref:
+  - -0.07408842617832051
+  - -0.033537523241230605
+  - -0.20718668417144162
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300086.9954717
+- name: sc_manual_035
+  cam_offset_ref:
+  - -0.08165533014011336
+  - -0.021284437786644295
+  - -0.20708353634087462
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300116.6963117
+- name: sc_manual_036
+  cam_offset_ref:
+  - -0.0738322613791311
+  - -0.07513343485982243
+  - -0.27025620012009044
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300405.4506402
+- name: sc_manual_037
+  cam_offset_ref:
+  - -0.07244203119083853
+  - -0.05175121583793335
+  - -0.20947938541340613
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300428.656592
+- name: sc_manual_038
+  cam_offset_ref:
+  - -0.07147983899528507
+  - -0.03510673503300693
+  - -0.20936184017205867
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300434.9478528
+- name: sc_manual_039
+  cam_offset_ref:
+  - -0.07136862170378744
+  - -0.018032457668406332
+  - -0.2101941394379144
+  motion_camera_name: center
+  source: manual_velocity_teleop
+  reference_frame_during_calibration: task_board/sc_port_0/sc_port_base_link_entrance
+  task_during_calibration:
+    id: task_1
+    port_type: sc
+    port_name: sc_port_base
+    target_module_name: sc_port_0
+  timestamp_unix: 1781300439.4874072
